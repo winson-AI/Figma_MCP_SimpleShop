@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="70dp"
+    android:viewportWidth="100"
+    android:viewportHeight="70">
+  <!-- Navy high heel shoe -->
+  <path
+      android:pathData="M25,45 L60,45 L60,50 L55,55 L30,55 Z"
+      android:fillColor="#1E3A5F"/>
+  <!-- Heel -->
+  <path
+      android:pathData="M55,55 L57,60 L59,65 L55,65 L53,60 Z"
+      android:fillColor="#1E3A5F"/>
+  <!-- Toe area -->
+  <path
+      android:pathData="M25,45 Q20,40 25,35 L60,35 L60,45 Z"
+      android:fillColor="#2C4B73"/>
+  <!-- Highlight -->
+  <path
+      android:pathData="M30,40 L50,40 L50,42 L30,42 Z"
+      android:fillColor="#3A5F8A"/>
+</vector>

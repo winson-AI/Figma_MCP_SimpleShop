@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="70dp"
+    android:viewportWidth="100"
+    android:viewportHeight="70">
+  <!-- Grey handbag -->
+  <path
+      android:pathData="M25,30 L75,30 L75,60 L25,60 Z"
+      android:fillColor="#C8C8C8"/>
+  <path
+      android:pathData="M30,25 L35,30 L65,30 L70,25"
+      android:strokeColor="#A0A0A0"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"/>
+  <!-- Clasp -->
+  <rect android:x="45" android:y="32" android:width="10" android:height="6" 
+        android:fillColor="#D4AF37"/>
+  <!-- Chain strap -->
+  <path
+      android:pathData="M35,20 Q50,15 65,20"
+      android:strokeColor="#D4AF37"
+      android:strokeWidth="1.5"
+      android:fillColor="#00000000"/>
+</vector>
