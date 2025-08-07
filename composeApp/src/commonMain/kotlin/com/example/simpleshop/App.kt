@@ -36,7 +36,6 @@ fun DiscoverScreen() {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White)
-            .statusBarsPadding()
     ) {
         // Status Bar
         StatusBar()
@@ -78,23 +77,22 @@ fun StatusBar() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             // Cellular signal indicator
-            Text(
-                text = "•••",
-                fontSize = 12.sp,
-                color = Color.Black,
-                fontWeight = FontWeight.Bold
+            Image(
+                painter = painterResource(Res.drawable.ic_cellular),
+                contentDescription = "Cellular",
+                modifier = Modifier.size(18.dp)
             )
             // WiFi signal indicator  
-            Text(
-                text = "◔",
-                fontSize = 12.sp,
-                color = Color.Black
+            Image(
+                painter = painterResource(Res.drawable.ic_wifi),
+                contentDescription = "WiFi",
+                modifier = Modifier.size(16.dp)
             )
             // Battery indicator
-            Text(
-                text = "▓",
-                fontSize = 12.sp,
-                color = Color.Black
+            Image(
+                painter = painterResource(Res.drawable.ic_battery),
+                contentDescription = "Battery",
+                modifier = Modifier.size(24.dp)
             )
         }
     }
@@ -130,7 +128,6 @@ fun Header() {
                 tint = Color.Black,
                 modifier = Modifier.size(26.dp)
             )
-            // Notification dot is included in the icon
         }
     }
 }
