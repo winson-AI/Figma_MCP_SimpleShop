@@ -76,7 +76,7 @@ Open the project in Android Studio. The IDE will automatically sync the Gradle f
 
 ```
 Figma_MCP_SimpleShop/
-├── composeApp/                    # Main Compose Multiplatform module
+├── composeApp/                    # Main Compose Multiplatform modules
 │   ├── src/
 │   │   ├── androidMain/          # Android-specific code
 │   │   ├── commonMain/           # Shared code for all platforms
