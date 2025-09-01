@@ -11,11 +11,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -193,7 +196,8 @@ fun CategoryCards() {
                 title = "CLOTHING",
                 backgroundColor = Color(0xFFA3A798),
                 textColor = Color.White,
-                imageDescription = "Floral dress and woven bag"
+                imageDescription = "Floral dress and woven bag",
+                imageSize= DpSize(149.dp, 126.dp)
             )
         }
         item {
@@ -201,7 +205,8 @@ fun CategoryCards() {
                 title = "ACCESSORIES",
                 backgroundColor = Color(0xFF898280),
                 textColor = Color.White,
-                imageDescription = "Grey handbag and jewelry"
+                imageDescription = "Grey handbag and jewelry",
+                imageSize= DpSize(151.dp, 106.dp)
             )
         }
         item {
@@ -209,7 +214,8 @@ fun CategoryCards() {
                 title = "SHOES",
                 backgroundColor = Color(0xFF44565C),
                 textColor = Color.White,
-                imageDescription = "Black high heels"
+                imageDescription = "Black high heels",
+                imageSize= DpSize(109.dp, 125.dp),
             )
         }
         item {
@@ -217,7 +223,8 @@ fun CategoryCards() {
                 title = "SHOES",
                 backgroundColor = Color(0xFFB9AEB2),
                 textColor = Color.White,
-                imageDescription = "Beige blazer and coat"
+                imageDescription = "Beige blazer and coat",
+                imageSize= DpSize(100.dp, 125.dp)
             )
         }
     }
@@ -228,7 +235,8 @@ fun CategoryCard(
     title: String,
     backgroundColor: Color,
     textColor: Color,
-    imageDescription: String
+    imageDescription: String,
+    imageSize: DpSize
 ) {
     Box(
         modifier = Modifier
@@ -245,6 +253,7 @@ fun CategoryCard(
             color = textColor,
             modifier = Modifier
                 .align(Alignment.BottomStart)
+                .alpha(0f)
                 .padding(start = 22.dp, bottom = 28.dp)
         )
         
@@ -285,9 +294,9 @@ fun CategoryCard(
         // Product image positioned to match Figma design
         Box(
             modifier = Modifier
-                .size(120.dp, 80.dp)
+                .size(imageSize)
                 .align(Alignment.CenterEnd)
-                .offset(x = (-20).dp),
+                .offset(x = (-1).dp),
             contentAlignment = Alignment.Center
         ) {
             Image(
@@ -305,8 +314,8 @@ fun CategoryCard(
                 ),
                 contentDescription = imageDescription,
                 modifier = Modifier
-                    .size(100.dp, 70.dp)
-                    .offset(x = (-10).dp),
+                    .size(imageSize)
+                    .offset(x = (-1).dp),
                 contentScale = ContentScale.Fit
             )
         }
